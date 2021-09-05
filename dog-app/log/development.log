@@ -1,0 +1,178 @@
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+Migrating to CreateArticles (20210905110612)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210905110612_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210905110612"]]
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+Migrating to CreateDogs (20210905111038)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "dogs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "motto" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210905111038_create_dogs.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210905111038"]]
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (0.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-05 11:13:53.066667"], ["updated_at", "2021-09-05 11:13:53.066667"]]
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[36mDog Create (0.4ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nala"], ["motto", "Born to be wild"], ["created_at", "2021-09-05 11:14:42.807434"], ["updated_at", "2021-09-05 11:14:42.807434"]]
+  ↳ db/seeds.rb:2
+  [1m[35m (0.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:2
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Alex"], ["motto", "Calm as can be"], ["created_at", "2021-09-05 11:14:42.809061"], ["updated_at", "2021-09-05 11:14:42.809061"]]
+  ↳ db/seeds.rb:3
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:3
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Leroy"], ["motto", "Life of the pawty"], ["created_at", "2021-09-05 11:14:42.809825"], ["updated_at", "2021-09-05 11:14:42.809825"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mDog Create (0.1ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Belle"], ["motto", "Miss Independent"], ["created_at", "2021-09-05 11:14:42.810535"], ["updated_at", "2021-09-05 11:14:42.810535"]]
+  ↳ db/seeds.rb:5
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:5
+  [1m[36mDog Load (0.6ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-09-05 17:17:11 +0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/istiak/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/istiak/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/istiak/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-09-05 17:31:19 +0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/istiak/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/istiak/.rbenv/versions/2.6.3/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (3.5ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2021-09-05 17:31:37 +0600
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:2
+  Rendered dogs/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 2062ms (Views: 2058.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/dogs/1" for ::1 at 2021-09-05 17:31:43 +0600
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dogs" for ::1 at 2021-09-05 17:34:56 +0600
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.4ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:3
+  Rendered dogs/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 20ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dogs/new" for ::1 at 2021-09-05 17:34:59 +0600
+Processing by DogsController#new as HTML
+  Rendering dogs/new.html.erb within layouts/application
+  Rendered dogs/new.html.erb within layouts/application (31.7ms)
+Completed 200 OK in 47ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/dogs" for ::1 at 2021-09-05 17:35:06 +0600
+Processing by DogsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YF2rVg2shj55QPP/6r+N6uYOkwhetd7AgEBRty6+rgj2dbsn19aO6+cnfV69ugZ7Ijgz9O4C9Y/Wj9Mmh2WsAA==", "dog"=>{"name"=>"Istiak", "motto"=>"MLBD"}, "commit"=>"Create Dog"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:15
+  [1m[36mDog Create (1.7ms)[0m  [1m[32mINSERT INTO "dogs" ("name", "motto", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Istiak"], ["motto", "MLBD"], ["created_at", "2021-09-05 11:35:06.525487"], ["updated_at", "2021-09-05 11:35:06.525487"]]
+  ↳ app/controllers/dogs_controller.rb:15
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:15
+Redirected to http://localhost:3000/dogs/5
+Completed 200 OK in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/dogs/5" for ::1 at 2021-09-05 17:35:06 +0600
+Processing by DogsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mDog Load (0.3ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:7
+  Rendering dogs/show.html.erb within layouts/application
+  Rendered dogs/show.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dogs/" for ::1 at 2021-09-05 17:35:11 +0600
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (0.2ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:3
+  Rendered dogs/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dogs/1/edit" for ::1 at 2021-09-05 17:35:13 +0600
+Processing by DogsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:21
+  Rendering dogs/edit.html.erb within layouts/application
+  Rendered dogs/edit.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/dogs/5" for ::1 at 2021-09-05 17:35:19 +0600
+Processing by DogsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U2D0gCjEWifTnoOcX9KiZoa9aBhm//3zJ+9iXK2QiNf42kQ/yqo0Ik5rH6Y+o0ACFJKHPoFB7NadHqAEMZUL5w==", "id"=>"5"}
+  [1m[36mDog Load (0.1ms)[0m  [1m[34mSELECT  "dogs".* FROM "dogs" WHERE "dogs"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/dogs_controller.rb:33
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34
+  [1m[36mDog Destroy (0.4ms)[0m  [1m[31mDELETE FROM "dogs" WHERE "dogs"."id" = ?[0m  [["id", 5]]
+  ↳ app/controllers/dogs_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/dogs_controller.rb:34
+Redirected to http://localhost:3000/dogs
+Completed 302 Found in 2ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/dogs" for ::1 at 2021-09-05 17:35:19 +0600
+Processing by DogsController#index as HTML
+  Rendering dogs/index.html.erb within layouts/application
+  [1m[36mDog Load (5.7ms)[0m  [1m[34mSELECT "dogs".* FROM "dogs"[0m
+  ↳ app/views/dogs/index.html.erb:3
+  Rendered dogs/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 5.7ms)
+
+
